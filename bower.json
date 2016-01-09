@@ -1,0 +1,19 @@
+{
+  "name": "Calebiosu",
+  "version": "0.0.0",
+  "authors": [
+    "Caleb Alebiosu <cba2117@columbia.edu>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.3"
+  }
+}
