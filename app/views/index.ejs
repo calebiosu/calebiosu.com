@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="Caleb Alebiosu">
+
+	    <title>Calebiosu</title>
+
+	    <link href="css/bootstrap.css" rel="stylesheet">
+	    <link href="css/mean.css" rel="stylesheet">
+
+	    <!-- Custom Fonts -->
+	    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<body ng-app="Calebiosu Blog">       
+        <nav id="custom-bootstrap-menu" class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand active" href="/">{Caleb}iosu</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id='projects'><a href="/projects">Projects</a></li>
+                        <li id='contact'><a href="/contact">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="page-scroll" data-ng-show="authentication.user">
+                            <a href="/#!/posts/create">CREATE</a>
+                        </li>
+                        <li class="page-scroll" data-ng-show="authentication.user">
+                            <a href="/#!/posts">POSTs</a>
+                        </li>
+                        <li class="page-scroll" data-ng-show="authentication.user">
+                            <a href="/logout">Hello <span data-ng-bind="authentication.user.name" data-ng-show="authentication.user"></span>, Logout?</a>
+                        </li>
+                        <li><a href="/#!/blog">Blog</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+        <section ng-view class="main-section"></section>
+
+        <script type="text/javascript">
+            window.user = <%- user || 'null' %>;
+        </script>
+
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/mean.js"></script>
+
+        <script type="text/javascript" src="/js/angular/angular.js"></script>
+        <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
+
+        <script type="text/javascript" src="/posts/posts.client.module.js"></script>
+        <script type="text/javascript" src="/posts/controllers/posts.client.controller.js"></script>
+        <script type="text/javascript" src="/posts/services/posts.client.service.js"></script>
+        <script type="text/javascript" src="/posts/config/posts.client.routes.js"></script>
+        
+        <script type="text/javascript" src="/users/users.client.module.js"></script>
+        <script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
+
+        <script type="text/javascript" src="/blog/blog.client.module.js"></script>
+        <script type="text/javascript" src="/blog/controllers/blog.client.controller.js"></script>
+        <script type="text/javascript" src="/blog/config/blog.client.routes.js"></script>
+
+        <script type="text/javascript" src="/application.js"></script>
+    </body>
+</html>
