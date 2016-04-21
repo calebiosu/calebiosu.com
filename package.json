@@ -2,7 +2,7 @@
   "name": "calebiosu",
   "version": "1.0.0",
   "description": "Personal website",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +19,16 @@
   "author": "Caleb Alebiosu",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.3.4",
     "express": "latest",
-    "gulp": "latest"
+    "express-session": "^1.12.1",
+    "gulp": "latest",
+    "mongoose": "^4.3.5",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.3"
   }
 }
