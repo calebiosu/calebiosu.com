@@ -13,4 +13,4 @@ var db = mongoose(),
 app.listen(config.port);
 
 module.exports = app;
-console.log(process.env.NODE_ENV  + ' server running at http://localhost:' + config.port);
+console.log(process.env.NODE_ENV  + ' server running at http://calebiosu.com:' + config.port);
